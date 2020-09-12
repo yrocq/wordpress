@@ -1,5 +1,5 @@
 #!/bin/bash
 
-export INTERNAL_HOST_IP=$(ip route show default | awk '/default/ {print $3}')
+export WORDPRESS_DB_HOST=$(ip route show default | awk '/default/ {print $3}')
 
 docker-entrypoint.sh php-fpm
